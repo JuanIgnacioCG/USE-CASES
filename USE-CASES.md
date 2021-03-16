@@ -1,4 +1,4 @@
-# USE-CASES-JuanIgnacio
+# USE-CASES
 
 This repository contains lessons for the Juan Ignacio's tutorials/use-cases. Each  is a
 [jupyter lab](https://jupyter.org/), located inside the `use-cases` folder.

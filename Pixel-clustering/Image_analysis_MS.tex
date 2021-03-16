@@ -1,0 +1,582 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\DeclareUnicodeCharacter{8226}{$\bullet$}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[margin=0in,paperwidth=960pt,paperheight=540pt]{geometry}
+\graphicspath{{C:/GroupDocsApp/live/Conversion/WebApi/}}
+\begin{document}
+\definecolor{color_283006}{rgb}{1,1,1}
+\definecolor{color_29791}{rgb}{0,0,0}
+\definecolor{color_259142}{rgb}{0.905882,0.901961,0.901961}
+\definecolor{color_282904}{rgb}{1,1,0.6}
+\definecolor{color_98869}{rgb}{0.266667,0.447059,0.768628}
+\definecolor{color_77643}{rgb}{0.184314,0.321569,0.560784}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(209.8789,-103.9826){\fontsize{54}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}IMAGE  ANALYSIS  FOR }
+\put(245.8789,-162.3026){\fontsize{54}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}MATERIAL  SCIENCE}
+\put(214.45,-209.4223){\fontsize{26}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}From image properties to material properties (I)}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-107.9931){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Key ideas}
+\put(106.45,-172.5676){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(124.45,-172.5676){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Motivation}
+\put(106.45,-208.4876){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(124.45,-208.4876){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}General procedure}
+\put(106.45,-244.4076){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(124.45,-244.4076){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Technical details}
+\put(106.45,-280.3276){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(124.45,-280.3276){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Small Example}
+\put(106.45,-316.2476){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(124.45,-316.2476){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Limitations}
+\put(106.45,-352.1676){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(124.45,-352.1676){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Big example with Github and Federico’s code. Resources at Imdea.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -435.875pt) -- (945pt, -435.875pt)
+ -- (945pt, -435.875pt)
+ -- (945pt, -500.75pt)
+ -- (945pt, -500.75pt)
+ -- (-15pt, -500.75pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-77.2431){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Motivation}
+\put(307.95,-57.26044){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}How to analyze the microstructure of the materials }
+\put(307.95,-86.06042){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}from the images of our tests?}
+\put(17,-480.8749){\includegraphics[width=299.8749pt,height=299.8749pt]{latexImage_ac89b860c792a80781085bdb4bf60c74.png}}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.75pt]
+(17.37505pt, -181.1251pt) -- (317.25pt, -181.1251pt)
+ -- (317.25pt, -181.1251pt)
+ -- (317.25pt, -481pt)
+ -- (317.25pt, -481pt)
+ -- (17.37505pt, -481pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(47.12503,-167.4078){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Porosity in CFRP tomography}
+\put(350,-480.875){\includegraphics[width=299.8751pt,height=299.875pt]{latexImage_99e051897e2034f7dac6eae7338e729c.png}}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.75pt]
+(349.5pt, -181.1251pt) -- (649.3751pt, -181.1251pt)
+ -- (649.3751pt, -181.1251pt)
+ -- (649.3751pt, -481pt)
+ -- (649.3751pt, -481pt)
+ -- (349.5pt, -481pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(400.375,-167.4078){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Metalic Powder particles}
+\put(742,-482.6249){\includegraphics[width=110.3751pt,height=306.6249pt]{latexImage_df2e93788b0736377dcf997ad1ee201f.png}}
+\put(742.1251,-167.4078){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Impact CFRP}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-107.9931){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}General procedure}
+\put(106.45,-172.5676){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(142.45,-172.5676){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Obtain a binary image.}
+\put(106.45,-208.4876){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}2.}
+\put(142.45,-208.4876){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Detect independent regions of interests.}
+\put(106.45,-244.4076){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}3.}
+\put(142.45,-244.4076){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Compute properties to the regions.}
+\put(106.45,-280.3276){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}4.}
+\put(142.45,-280.3276){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Relate the measured properties with functional aspects.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-66.61816){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}General procedure}
+\put(57,-436.8749){\includegraphics[width=299.8749pt,height=299.8749pt]{latexImage_ac89b860c792a80781085bdb4bf60c74.png}}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.75pt]
+(57.37505pt, -136.6251pt) -- (357.25pt, -136.6251pt)
+ -- (357.25pt, -136.6251pt)
+ -- (357.25pt, -436.5pt)
+ -- (357.25pt, -436.5pt)
+ -- (57.37505pt, -436.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(573,-436.8749){\includegraphics[width=299.8751pt,height=299.8749pt]{latexImage_83796d41d0b5d44f861f8336c2163777.png}}
+\put(64.57504,-120.4153){\fontsize{16}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Gray scale. Pixel values =( 0 - 255/65535)}
+\put(571.2,-101.1802){\fontsize{12}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Binary. Pixel values =( 0 background,    1 regions )}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282904][even odd rule]
+(-15pt, -444.875pt) -- (573.5pt, -444.875pt)
+ -- (573.5pt, -444.875pt)
+ -- (573.5pt, -466.625pt)
+ -- (573.5pt, -466.625pt)
+ -- (-15pt, -466.625pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(-7.799988,-459.6802){\fontsize{12}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Avoid the term “black and white image” because it is ambiguous when google for questions.}
+\put(501.45,-45.74252){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}1.}
+\put(537.45,-45.74252){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Obtain a binary image.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(64.57504,-149.0403){\fontsize{16}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}Binary}
+\put(113.45,-149.0403){\fontsize{16}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}. Pixel values =( 0 - 1)}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-70.99316){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}General procedure}
+\put(501.575,-34.19269){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(537.575,-34.19269){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Obtain a binary image.}
+\put(501.575,-70.1127){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}2.}
+\put(537.575,-70.1127){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Detect independent regions of }
+\put(537.575,-96.03271){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}interests. Numbered ID for each }
+\put(537.575,-121.9527){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}region.}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282904][even odd rule]
+(-15pt, -446.25pt) -- (573.5pt, -446.25pt)
+ -- (573.5pt, -446.25pt)
+ -- (573.5pt, -468pt)
+ -- (573.5pt, -468pt)
+ -- (-15pt, -468pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(-7.799988,-461.0552){\fontsize{12}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Avoid the term “black and white image” because it is ambiguous when google for questions.}
+\put(57,-413.375){\includegraphics[width=246.3749pt,height=246.375pt]{latexImage_7e22d27d1068d18b137e83a4ab566635.png}}
+\put(477,-422.375){\includegraphics[width=203.375pt,height=203.375pt]{latexImage_11ba9f3342c9053ca6b2a60c3ebc2cc0.png}}
+\put(484.325,-149.0403){\fontsize{16}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}Labels. }
+\put(540.325,-149.0403){\fontsize{16}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Gray levels. Pixel values = ( 0 background}
+\put(628.325,-168.2403){\fontsize{16}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}                         1 region number 1}
+\put(628.325,-187.4403){\fontsize{16}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}                         2 region… 2}
+\put(628.325,-206.6403){\fontsize{16}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}                         n regions )}
+\put(717,-455.75){\includegraphics[width=170.75pt,height=235.75pt]{latexImage_4831d4d57ec79e45cbb4ada35c6c8499.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-107.9931){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}General procedure}
+\put(414.325,-194.5731){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Common useful properties:}
+\put(414.325,-224.5971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(441.325,-224.5971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Area}
+\put(414.325,-256.9971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}2.}
+\put(441.325,-256.9971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Centroid}
+\put(414.325,-289.3971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}3.}
+\put(441.325,-289.3971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Long axis }
+\put(414.325,-321.7971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}4.}
+\put(441.325,-321.7971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Short axis}
+\put(414.325,-354.1971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}5.}
+\put(441.325,-354.1971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Coordinates of the region pixels.}
+\put(414.325,-386.5971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}6.}
+\put(441.325,-386.5971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Filled area}
+\put(414.325,-418.9971){\fontsize{18.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}7.}
+\put(441.325,-418.9971){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Bounding box}
+\put(501.575,-37.57001){\fontsize{20.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}1.}
+\put(537.575,-37.57001){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Obtain a binary image.}
+\put(501.575,-71.57001){\fontsize{20.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}2.}
+\put(537.575,-71.57001){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Detect independent regions of interests. }
+\put(537.575,-95.57001){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Numbered ID for each region.}
+\put(501.575,-129.57){\fontsize{20.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}3.}
+\put(537.575,-129.57){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Compute properties of each region.}
+\put(113,-430.75){\includegraphics[width=268.75pt,height=256.75pt]{latexImage_0526571a0558181da85682443c8e007a.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-107.9931){\fontsize{44}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}General procedure}
+\put(501.575,-41.50122){\fontsize{22.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}1.}
+\put(537.575,-41.50122){\fontsize{22}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Obtain a binary image.}
+\put(501.575,-76.5412){\fontsize{22.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}2.}
+\put(537.575,-76.5412){\fontsize{22}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Detect independent regions of interests. }
+\put(537.575,-105.5812){\fontsize{22}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Numbered ID for each region.}
+\put(501.575,-140.6212){\fontsize{22.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}3.}
+\put(537.575,-140.6212){\fontsize{22}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Compute properties of each region.}
+\put(501.575,-175.6612){\fontsize{22.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}4.}
+\put(537.575,-175.6612){\fontsize{22}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Relate with material properties}
+\put(650,-406.625){\includegraphics[width=195.6249pt,height=195.625pt]{latexImage_7a269d42438fb03df09fcc4411195349.png}}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.75pt]
+(650.1251pt, -210.5pt) -- (845.75pt, -210.5pt)
+ -- (845.75pt, -210.5pt)
+ -- (845.75pt, -406.125pt)
+ -- (845.75pt, -406.125pt)
+ -- (650.1251pt, -406.125pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(241,-434.2828){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Manufacturing process with the area }
+\put(244.9375,-455.8829){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}and the long and short axis of pores}
+\put(299,-406.625){\includegraphics[width=195.875pt,height=195.625pt]{latexImage_11ba9f3342c9053ca6b2a60c3ebc2cc0.png}}
+\put(585.4376,-432.2828){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Filled area of the particles with quality }
+\put(677.1714,-453.8829){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}of final product}
+\put(21.07504,-252.8556){\fontsize{32}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Examples:}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-85.18353){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Technical details of the process}
+\put(178.45,-128.3835){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}}
+\put(106.45,-172.5676){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(142.45,-172.5676){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Absolute/ Relative paths}
+\put(106.45,-208.4876){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}2.}
+\put(142.45,-208.4876){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Image bit type.}
+\put(106.45,-244.4076){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}3.}
+\put(142.45,-244.4076){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Image formats. Raw and tiff.}
+\put(106.45,-280.3276){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}4.}
+\put(142.45,-280.3276){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Multichannel (RGB) or one channel.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-85.18353){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Technical details of the process}
+\put(178.45,-128.3835){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}}
+\put(106.45,-131.8176){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(142.45,-131.8176){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Absolute/ Relative paths}
+\put(23.45,-210.2604){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Example:}
+\put(28,-395){\includegraphics[width=471.6249pt,height=146pt]{latexImage_7884cf8f9143caa470cf653546b9a9c5.png}}
+\put(530.8251,-268.7829){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Absolute path:}
+\put(530.8251,-290.3829){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791} “C:\\Users\\Juan Ignacio\\Desktop\\Folder1”}
+\put(530.8251,-355.1829){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Relative path:}
+\put(530.8251,-376.7828){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}“\\Folder1”}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282904][even odd rule]
+(222.8751pt, -435.125pt) -- (707.1251pt, -435.125pt)
+ -- (707.1251pt, -435.125pt)
+ -- (707.1251pt, -466.625pt)
+ -- (707.1251pt, -466.625pt)
+ -- (222.8751pt, -466.625pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(249.9405,-457.4004){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}The reference is where the running file is located}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-85.18353){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Technical details of the process}
+\put(178.45,-128.3835){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}}
+\put(106.45,-131.8176){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(142.45,-131.8176){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Image bit type}
+\put(41.7,-296.064){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(50.325,-296.064){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Unsigned raster: 0 - 255}
+\put(41.7,-324.864){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(50.325,-324.864){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Signed raster:  -128 a 127.}
+\put(160.6875,-237.4806){\fontsize{32}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}8 bit}
+\put(673.625,-237.4806){\fontsize{32}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}16 bit}
+\put(527.45,-296.064){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(536.075,-296.064){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Unsigned raster: 0 - 65535}
+\put(527.45,-324.864){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}•}
+\put(536.075,-324.864){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Signed raster:  -32767 - 32767.}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282904][even odd rule]
+(155.375pt, -410.875pt) -- (773.9999pt, -410.875pt)
+ -- (773.9999pt, -410.875pt)
+ -- (773.9999pt, -466.625pt)
+ -- (773.9999pt, -466.625pt)
+ -- (155.375pt, -466.625pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(177.7061,-433.1504){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Beware with the labels image when using 8-bit images, they only }
+\put(336.4014,-457.1504){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}support 255 different regions }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10pt) -- (945pt, 10pt)
+ -- (945pt, 10pt)
+ -- (945pt, -530pt)
+ -- (945pt, -530pt)
+ -- (-15pt, -530pt) -- cycle
+;
+\filldraw[color_259142][even odd rule]
+(-15pt, -466.625pt) -- (945pt, -466.625pt)
+ -- (945pt, -466.625pt)
+ -- (945pt, -531.5pt)
+ -- (945pt, -531.5pt)
+ -- (-15pt, -531.5pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(106.45,-85.18353){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Technical details of the process}
+\put(178.45,-128.3835){\fontsize{40}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}}
+\put(106.45,-131.8176){\fontsize{24.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}1.}
+\put(142.45,-131.8176){\fontsize{24}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Image formats. Raw and tiff.}
+\put(36.4375,-212.6504){\fontsize{20.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}•}
+\put(58.9375,-212.6504){\fontsize{20}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}Raw}
+\put(99.8125,-212.6504){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791} contains minimally processed data }
+\put(134.5,-236.6504){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}from the image sensor. }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_98869][even odd rule]
+(435.25pt, -213.7039pt) -- (545.4411pt, -213.7039pt)
+ -- (545.4411pt, -213.7039pt)
+ -- (545.4411pt, -204pt)
+ -- (545.4411pt, -204pt)
+ -- (560.5pt, -218.4375pt)
+ -- (560.5pt, -218.4375pt)
+ -- (545.4411pt, -232.8751pt)
+ -- (545.4411pt, -232.8751pt)
+ -- (545.4411pt, -223.1711pt)
+ -- (545.4411pt, -223.1711pt)
+ -- (435.25pt, -223.1711pt) -- cycle
+;
+\draw[color_77643,line width=1pt]
+(435.25pt, -213.7039pt) -- (545.4411pt, -213.7039pt)
+ -- (545.4411pt, -213.7039pt)
+ -- (545.4411pt, -204pt)
+ -- (545.4411pt, -204pt)
+ -- (560.5pt, -218.4375pt)
+ -- (560.5pt, -218.4375pt)
+ -- (545.4411pt, -232.8751pt)
+ -- (545.4411pt, -232.8751pt)
+ -- (545.4411pt, -223.1711pt)
+ -- (545.4411pt, -223.1711pt)
+ -- (435.25pt, -223.1711pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(599.625,-212.6504){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}No information of the size of the }
+\put(585.0577,-236.6504){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}images, nor bit type, little endian….}
+\put(619.5,-265.9078){\fontsize{18}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}A pain in the neck when coding}
+\put(36.15527,-339.2754){\fontsize{20.5}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_98869}•}
+\put(58.65527,-339.2754){\fontsize{20}{1}\usefont{T1}{ptm}{b}{n}\selectfont\color{color_29791}Tiff}
+\put(92.09473,-339.2754){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791} contains all the information to open }
+\put(192.5625,-363.2754){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}an image. }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_98869][even odd rule]
+(435.25pt, -340.0789pt) -- (545.4412pt, -340.0789pt)
+ -- (545.4412pt, -340.0789pt)
+ -- (545.4412pt, -330.375pt)
+ -- (545.4412pt, -330.375pt)
+ -- (560.5pt, -344.8125pt)
+ -- (560.5pt, -344.8125pt)
+ -- (545.4412pt, -359.25pt)
+ -- (545.4412pt, -359.25pt)
+ -- (545.4412pt, -349.5461pt)
+ -- (545.4412pt, -349.5461pt)
+ -- (435.25pt, -349.5461pt) -- cycle
+;
+\draw[color_77643,line width=1pt]
+(435.25pt, -340.0789pt) -- (545.4412pt, -340.0789pt)
+ -- (545.4412pt, -340.0789pt)
+ -- (545.4412pt, -330.375pt)
+ -- (545.4412pt, -330.375pt)
+ -- (560.5pt, -344.8125pt)
+ -- (560.5pt, -344.8125pt)
+ -- (545.4412pt, -359.25pt)
+ -- (545.4412pt, -359.25pt)
+ -- (545.4412pt, -349.5461pt)
+ -- (545.4412pt, -349.5461pt)
+ -- (435.25pt, -349.5461pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(576.8389,-338.9004){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Most tiff readers do not admit images }
+\put(612.6875,-362.9004){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}larger than 4 GB. (common in }
+\put(685.1875,-386.9004){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}tomography)}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282904][even odd rule]
+(210.75pt, -412pt) -- (829.3751pt, -412pt)
+ -- (829.3751pt, -412pt)
+ -- (829.3751pt, -467.75pt)
+ -- (829.3751pt, -467.75pt)
+ -- (210.75pt, -467.75pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(220.4209,-434.2754){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Divide and conquer. Save the volume image as a collection of frame }
+\put(473.5264,-458.2754){\fontsize{20}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}tiff images}
+\put(60.32504,-450.3556){\fontsize{32}{1}\usefont{T1}{ptm}{m}{n}\selectfont\color{color_29791}Solution?}
+\end{picture}
+\end{document}
